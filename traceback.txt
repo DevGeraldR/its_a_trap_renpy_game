@@ -1,0 +1,22 @@
+﻿I'm sorry, but an uncaught exception occurred.
+
+While running game code:
+  File "game/script.rpy", line 90, in script
+    jade """
+Exception: Sayer 'jade' is not defined.
+
+-- Full Traceback ------------------------------------------------------------
+
+Full traceback:
+  File "game/script.rpy", line 90, in script
+    jade """
+  File "/home/gerald/Desktop/Renpy/renpy-8.0.3-sdk/renpy/ast.py", line 881, in execute
+    who = eval_who(self.who, self.who_fast)
+  File "/home/gerald/Desktop/Renpy/renpy-8.0.3-sdk/renpy/ast.py", line 774, in eval_who
+    raise Exception("Sayer '%s' is not defined." % who)
+Exception: Sayer 'jade' is not defined.
+
+Linux-5.15.0-52-generic-x86_64-with-glibc2.35 x86_64
+Ren'Py 8.0.3.22090809
+Its a Trap 1.0
+Thu Nov 17 12:18:47 2022

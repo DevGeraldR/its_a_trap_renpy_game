@@ -26,9 +26,9 @@ label start:
     show player with dissolve
 
     player """
-    Where am i?
+    Where am I?
 
-    I am in the forest?
+    Am I in the forest?
 
     What I am doing here?
 
@@ -55,9 +55,11 @@ label start:
     bryan """
     Welcome to It's a Trap game
     
-    Here you be given a change to pick which entrance you would like to enter
+    Here you will be given a change to pick which entrance you would like to enter
 
-    Your destiny will decide what will happen to you
+    One wrong choose will cause your life
+
+    Be patient and think wisely
 
     """
 
@@ -142,7 +144,7 @@ label first_level:
 
     player "What if it is really a trap and just tricking you"
 
-    jade "What so ever I will go not Its not a Tap now... BYE"
+    jade "What ever I will go to Its not a Tap now... BYE"
 
     player "Hmmmmm....Where do i go?"
 
@@ -150,7 +152,12 @@ label first_level:
         "Trap":
             hide door
             show player
-            player "Wait what another entrace"
+            player """
+            I think I choose the right one
+
+            Wait, what? another entrace?
+            """
+        
             jump second_level
         "Not a Trap":
             scene bg fire
@@ -169,7 +176,17 @@ label first_level:
 label second_level:
     hide player
     show door 2
-    player "A trap and Not a trap again"
+    player """
+    A trap and Not a trap again
+    
+    Which one should i choose?
+
+    A while ago i choose trap and its safe so probably I choose trap again
+
+    But what if it is just a trick?
+
+    Hmmmmmm Where i will go???
+    """
     menu:
         "Trap":
             scene bg ice
@@ -187,7 +204,10 @@ label second_level:
         "Not a Trap":
             hide door
             show player
-            player "Again!!!!!!!!"
+            player """
+            Pew Thats a close one!!!!!
+
+            Again!!!!!!!!"""
             jump third_level
 
 label third_level:
@@ -212,7 +232,10 @@ label third_level:
             jump end
         "Not a Trap":
             hide door
+            scene bg start
+            show player
             player "Pew, Thanks good I am now outside"
+            hide player
             jump end
         "Safe":
             scene bg fire
@@ -229,6 +252,8 @@ label third_level:
             jump end
 
 label end:
+    show bryan
     "Thank you for playing the game"
-    jump start
+    hide bryan
+    return
     
